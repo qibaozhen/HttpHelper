@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        HttpHelper.run()
+        HttpHelper.shared.postRequest(urlString: "http://www.baidu.com", params: ["e":"e"], success: { (dict) in
+            
+        }) { (error) in
+            
+        }
         return true
     }
 
